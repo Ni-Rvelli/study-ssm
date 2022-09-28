@@ -4,22 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4689a25-c3ea-4bef-a498-5eeac7d9b74a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-mybatis/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-mybatis/src/main/java/com/nr/mybatis/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-mybatis/src/main/java/com/nr/mybatis/pojo/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-mybatis/src/main/resources/log4j.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-mybatis/src/main/resources/mappers/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-mybatis/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-mybatis/src/test/java/MyBatisTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-ssm.iml" afterDir="false" />
+    <list default="true" id="d4689a25-c3ea-4bef-a498-5eeac7d9b74a" name="Changes" comment="mybatis新增测试以及日志">
+      <change afterPath="$PROJECT_DIR$/study-mybatis/src/main/java/com/nr/mybatis/util/SqlSessionUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-mybatis/src/main/resources/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-mybatis/src/main/java/com/nr/mybatis/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis/src/main/java/com/nr/mybatis/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-mybatis/src/main/java/com/nr/mybatis/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis/src/main/java/com/nr/mybatis/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-mybatis/src/main/resources/mappers/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis/src/main/resources/mappers/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-mybatis/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-mybatis/src/test/java/MyBatisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis/src/test/java/MyBatisTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-mybatis/target/classes/com/nr/mybatis/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis/target/classes/com/nr/mybatis/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-mybatis/target/classes/com/nr/mybatis/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis/target/classes/com/nr/mybatis/pojo/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-mybatis/target/classes/mappers/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis/target/classes/mappers/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-mybatis/target/test-classes/MyBatisTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis/target/test-classes/MyBatisTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +32,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="c9db71da-4137-43f7-95d0-0108ebf49098" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -69,12 +69,32 @@
       <recent name="E:\workspace\study-ssm\study-mybatis\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyBatisTest.testInsert1">
-    <configuration name="MyBatisTest.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MyBatisTest.testGetUserById">
+    <configuration name="MyBatisTest.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="study-mybatis" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyBatisTest" />
-      <option name="METHOD_NAME" value="testInsert" />
+      <option name="METHOD_NAME" value="testDelete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyBatisTest.testGetAllUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="study-mybatis" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyBatisTest" />
+      <option name="METHOD_NAME" value="testGetAllUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyBatisTest.testGetUserById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="study-mybatis" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyBatisTest" />
+      <option name="METHOD_NAME" value="testGetUserById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -90,10 +110,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyBatisTest.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="study-mybatis" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyBatisTest" />
+      <option name="METHOD_NAME" value="testUpdate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyBatisTest.testGetUserById" />
+        <item itemvalue="JUnit.MyBatisTest.testGetAllUser" />
+        <item itemvalue="JUnit.MyBatisTest.testDelete" />
+        <item itemvalue="JUnit.MyBatisTest.testUpdate" />
         <item itemvalue="JUnit.MyBatisTest.testInsert1" />
-        <item itemvalue="JUnit.MyBatisTest.testInsert" />
       </list>
     </recent_temporary>
   </component>
@@ -105,8 +138,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664285411802</updated>
-      <workItem from="1664285413307" duration="2910000" />
+      <workItem from="1664285413307" duration="3075000" />
+      <workItem from="1664370645700" duration="5009000" />
     </task>
+    <task id="LOCAL-00001" summary="mybatis新增测试以及日志">
+      <created>1664288413759</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664288413759</updated>
+    </task>
+    <task id="LOCAL-00002" summary="mybatis新增测试以及日志">
+      <created>1664288436196</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664288436196</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,5 +171,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="mybatis新增测试以及日志" />
+    <option name="LAST_COMMIT_MESSAGE" value="mybatis新增测试以及日志" />
   </component>
 </project>
