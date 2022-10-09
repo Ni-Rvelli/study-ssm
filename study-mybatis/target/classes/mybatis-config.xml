@@ -2,8 +2,31 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
+    <!--
+        mybatis中的标签必须按照指定的顺序配置
+        (properties?,settings?,typeAliases?,typeHandlers?,objectFactory?,objectWrapperFactory?,
+        reflectorFactory?,plugins?,environments?,databaseIdProvider?,mappers?)".
+    -->
+
+
     <!--引入properties文件，此后就可以在当前文件中使用${key}的方式访问value-->
     <properties resource="jdbc.properties"></properties>
+
+    <!--
+        typeAliases:设置类型别名，即为某个具体的类型设置一个别名
+        在mybatis范围中，就可以使用别名表示一个具体的类型
+    -->
+    <typeAliases>
+        <!--
+           type：需要起别名的类型
+           alias：别名（不设置的情况下默认使用类型，不区分大小写，例：user和USER）
+        -->
+        <typeAlias type="com.nr.mybatis.pojo.User" alias="user_qqq"></typeAlias>
+        <!--
+            通过包设置类型别名，指定包下拥有默认别名（解决类型较多的情况）
+        -->
+        <package name="com.nr.mybatis.pojo"/>
+    </typeAliases>
 
     <!--
         environments: 设置连接数据库的环境
@@ -39,11 +62,19 @@
                 <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
                 <property name="url" value="jdbc:mysql://localhost:3306/study_ssm?serverTimezone=UTC"/>
                 <property name="username" value="root"/>
-                <property name="password" value="nirui0718"/>
+                <property name="password" value="123456"/>
             </dataSource>
         </environment>
-    </environments> <!--引入映射文件-->
+    </environments>
+
+    <!--引入映射文件-->
     <mappers>
-        <mapper resource="mappers/UserMapper.xml"></mapper>
+        <!-- <mapper resource="mappers/UserMapper.xml"></mapper>-->
+        <!--
+            以包的方式引入映射文件，但是必须满足两个条件
+            1、mapper接口和映射文件所在的包必须一致
+            2、mapper接口的名字和映射文件的名字必须一致
+        -->
+        <package name="com.nr.mybatis.mapper"/>
     </mappers>
 </configuration>

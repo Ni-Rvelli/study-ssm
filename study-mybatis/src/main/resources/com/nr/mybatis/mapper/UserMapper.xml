@@ -28,7 +28,7 @@
         select * from t_user  where id =4
     </select>
 
-    <select id="getAllUser" resultType="com.nr.mybatis.pojo.User">
+    <select id="getAllUser" resultType="user_qqq">
         select * from t_user
     </select>
 
