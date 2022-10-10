@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.nr.ssm.mybatis</groupId>
-    <artifactId>study-mybatis</artifactId>
+    <artifactId>study-mybatis-01-start</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
