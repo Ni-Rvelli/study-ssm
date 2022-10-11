@@ -5,39 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4689a25-c3ea-4bef-a498-5eeac7d9b74a" name="Changes" comment="mybatis sqlSession工具类">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/src/main/java/com/nr/mybatis/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/src/main/java/com/nr/mybatis/pojo/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/src/main/java/com/nr/mybatis/util/SqlSessionUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/src/main/resources/com/nr/mybatis/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/src/main/resources/jdbc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/src/main/resources/log4j.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/src/test/java/MyBatisTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/src/main/java/com/nr/mybatis/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/src/main/java/com/nr/mybatis/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/src/main/java/com/nr/mybatis/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/src/main/java/com/nr/mybatis/pojo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/src/main/java/com/nr/mybatis/util/SqlSessionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/src/main/java/com/nr/mybatis/util/SqlSessionUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/src/main/resources/com/nr/mybatis/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/src/main/resources/com/nr/mybatis/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/src/main/resources/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/src/main/resources/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/src/main/resources/log4j.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/src/main/resources/mybatis-temp-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/src/main/resources/mybatis-temp-test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/src/test/java/MyBatisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/src/test/java/MyBatisTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/target/classes/com/nr/mybatis/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/target/classes/com/nr/mybatis/mapper/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/target/classes/com/nr/mybatis/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/target/classes/com/nr/mybatis/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/target/classes/com/nr/mybatis/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/target/classes/com/nr/mybatis/pojo/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/target/classes/com/nr/mybatis/util/SqlSessionUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/target/classes/com/nr/mybatis/util/SqlSessionUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/target/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/target/classes/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/target/classes/log4j.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/target/classes/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis/target/test-classes/MyBatisTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-01-start/target/test-classes/MyBatisTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-mybatis-02-parameter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -58,14 +44,18 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/workspace/study-ssm/study-mybatis-02-parameter/src",
+    "settings.editor.selected.configurable": "editor.preferences.appearance"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workspace\study-ssm\study-mybatis-02-parameter\src" />
       <recent name="E:\workspace\study-ssm\study-mybatis\src\main\java\com\nr\mybatis\pojo" />
       <recent name="E:\workspace\study-ssm\study-mybatis\src\main\resources" />
       <recent name="E:\workspace\study-ssm\study-mybatis\src\main\java\com\nr\mybatis" />
@@ -76,19 +66,39 @@
       <recent name="E:\workspace\study-ssm\study-mybatis\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyBatisTest.testGetAllUser">
-    <configuration name="MyBatisTest.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="study-mybatis-01-start" />
+  <component name="RunManager" selected="JUnit.MyBatisTest.checkLoginByParam">
+    <configuration name="MyBatisTest.checkLoginByParam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="study-mybatis-02-parameter" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyBatisTest" />
-      <option name="METHOD_NAME" value="testDelete" />
+      <option name="METHOD_NAME" value="checkLoginByParam" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyBatisTest.testGetAllUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="study-mybatis-01-start" />
+    <configuration name="MyBatisTest.testCheckLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="study-mybatis-02-parameter" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyBatisTest" />
+      <option name="METHOD_NAME" value="testCheckLogin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyBatisTest.testCheckLoginByMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="study-mybatis-02-parameter" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyBatisTest" />
+      <option name="METHOD_NAME" value="testCheckLoginByMap" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyBatisTest.testGetAllUser (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="study-mybatis-02-parameter" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyBatisTest" />
       <option name="METHOD_NAME" value="testGetAllUser" />
@@ -97,31 +107,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyBatisTest.testGetUserById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="study-mybatis-01-start" />
+    <configuration name="MyBatisTest.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="study-mybatis-02-parameter" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyBatisTest" />
-      <option name="METHOD_NAME" value="testGetUserById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyBatisTest.testInsert1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="study-mybatis-01-start" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MyBatisTest" />
-      <option name="METHOD_NAME" value="testInsert1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyBatisTest.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="study-mybatis-01-start" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MyBatisTest" />
-      <option name="METHOD_NAME" value="testUpdate" />
+      <option name="METHOD_NAME" value="testInsert" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -129,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MyBatisTest.testGetAllUser" />
-        <item itemvalue="JUnit.MyBatisTest.testGetUserById" />
-        <item itemvalue="JUnit.MyBatisTest.testDelete" />
-        <item itemvalue="JUnit.MyBatisTest.testUpdate" />
-        <item itemvalue="JUnit.MyBatisTest.testInsert1" />
+        <item itemvalue="JUnit.MyBatisTest.checkLoginByParam" />
+        <item itemvalue="JUnit.MyBatisTest.testInsert" />
+        <item itemvalue="JUnit.MyBatisTest.testCheckLoginByMap" />
+        <item itemvalue="JUnit.MyBatisTest.testCheckLogin" />
+        <item itemvalue="JUnit.MyBatisTest.testGetAllUser (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -150,6 +140,7 @@
       <workItem from="1664415629337" duration="4281000" />
       <workItem from="1665322574490" duration="2203000" />
       <workItem from="1665373107781" duration="869000" />
+      <workItem from="1665408362521" duration="2995000" />
     </task>
     <task id="LOCAL-00001" summary="mybatis新增测试以及日志">
       <created>1664288413759</created>
@@ -188,7 +179,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="mybatis新增测试以及日志" />
