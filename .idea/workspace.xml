@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4689a25-c3ea-4bef-a498-5eeac7d9b74a" name="Changes" comment="mybatis sqlSession工具类">
-      <change afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/src/main/java/com/nr/mybatis/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/src/main/java/com/nr/mybatis/pojo/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/src/main/java/com/nr/mybatis/util/SqlSessionUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/src/main/resources/com/nr/mybatis/mapper/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/src/main/resources/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/src/main/resources/log4j.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/src/test/java/MyBatisTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study-mybatis-02-parameter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d4689a25-c3ea-4bef-a498-5eeac7d9b74a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,15 +32,6 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/workspace/study-ssm/study-mybatis-02-parameter/src",
-    "settings.editor.selected.configurable": "editor.preferences.appearance"
-  }
-}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\workspace\study-ssm\study-mybatis-02-parameter\src" />
@@ -179,6 +158,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="mybatis新增测试以及日志" />
