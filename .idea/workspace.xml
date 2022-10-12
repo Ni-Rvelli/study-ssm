@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4689a25-c3ea-4bef-a498-5eeac7d9b74a" name="Changes" comment="" />
+    <list default="true" id="d4689a25-c3ea-4bef-a498-5eeac7d9b74a" name="Changes" comment="mybatis sqlSession工具类">
+      <change afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/src/main/java/com/nr/mybatis/mapper/SelectMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/src/main/resources/com/nr/mybatis/mapper/SelectMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/src/test/java/SelectMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-mybatis-02-parameter/target/classes/com/nr/mybatis/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/study-mybatis-02-parameter/target/classes/com/nr/mybatis/mapper/UserMapper.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,13 +22,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="mybatis-config" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -32,8 +39,18 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/workspace/study-ssm/study-mybatis-02-parameter/src/main/resources/com/nr/mybatis/mapper",
+    "settings.editor.selected.configurable": "editor.preferences.appearance"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workspace\study-ssm\study-mybatis-02-parameter\src\main\resources\com\nr\mybatis\mapper" />
       <recent name="E:\workspace\study-ssm\study-mybatis-02-parameter\src" />
       <recent name="E:\workspace\study-ssm\study-mybatis\src\main\java\com\nr\mybatis\pojo" />
       <recent name="E:\workspace\study-ssm\study-mybatis\src\main\resources" />
@@ -45,7 +62,7 @@
       <recent name="E:\workspace\study-ssm\study-mybatis\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyBatisTest.checkLoginByParam">
+  <component name="RunManager" selected="JUnit.SelectMapperTest.SelectMapperTest">
     <configuration name="MyBatisTest.checkLoginByParam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="study-mybatis-02-parameter" />
       <option name="PACKAGE_NAME" value="" />
@@ -76,16 +93,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyBatisTest.testGetAllUser (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="study-mybatis-02-parameter" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MyBatisTest" />
-      <option name="METHOD_NAME" value="testGetAllUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MyBatisTest.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="study-mybatis-02-parameter" />
       <option name="PACKAGE_NAME" value="" />
@@ -96,13 +103,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SelectMapperTest.SelectMapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="study-mybatis-02-parameter" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SelectMapperTest" />
+      <option name="METHOD_NAME" value="SelectMapperTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SelectMapperTest.SelectMapperTest" />
         <item itemvalue="JUnit.MyBatisTest.checkLoginByParam" />
         <item itemvalue="JUnit.MyBatisTest.testInsert" />
         <item itemvalue="JUnit.MyBatisTest.testCheckLoginByMap" />
         <item itemvalue="JUnit.MyBatisTest.testCheckLogin" />
-        <item itemvalue="JUnit.MyBatisTest.testGetAllUser (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -120,6 +137,7 @@
       <workItem from="1665322574490" duration="2203000" />
       <workItem from="1665373107781" duration="869000" />
       <workItem from="1665408362521" duration="2995000" />
+      <workItem from="1665493990032" duration="2739000" />
     </task>
     <task id="LOCAL-00001" summary="mybatis新增测试以及日志">
       <created>1664288413759</created>
@@ -142,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664375749896</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="mybatis sqlSession工具类">
+      <created>1665494044039</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665494044039</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +183,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="mybatis新增测试以及日志" />
