@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?> <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nr.mybatis.mapper.SpecialMapper">
+
+    <select id="getUserByNameLike" resultType="User">
+        <!--select * from t_user where username like '%${nameLike}%'-->
+        <!--select * from t_user where username like concat('%',#{nameLike},'%')-->
+        <!--下面的方式是最长用的-->
+        select * from t_user where username like "%"#{nameLike}"%"
+    </select>
+
+    <delete id="deleteMore">
+        <!--
+            该方式可能导致sql注入，可以使用动态标签循环拼接实现，后面笔记见
+        -->
+        delete from t_user where id in (${ids})
+    </delete>
+
+    <select id="getAllUser" resultType="User">
+        <!--
+            只能使用${}，无法使用#{}
+        -->
+        select * from ${tableName}
+    </select>
+
+    <!--
+        useGeneratedKeys：设置使用自增的主键
+        keyProperty:主键返回放在对象的哪个字段里面
+     -->
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id">
+        insert into t_user values (null,#{username},#{password},#{age},#{gender},#{email})
+    </insert>
+</mapper>
