@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?> <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nr.mybatis.mapper.EmpMapper">
+        <!--
+            resultMap：设置自定义映射
+            属性：
+                id：表示自定义映射的唯一标识
+                type：查询的数据要映射的实体类的类型
+            子标签：
+                id：设置主键的映射关系
+                result：设置普通字段的映射关系
+                association：设置多对一的映射关系
+                collection：设置一对多的映射关系
+            属性：
+                property：设置映射关系中实体类中的属性名
+                column：设置映射关系中表中的字段名
+        -->
+        <resultMap id="empResultMap" type="Emp">
+            <id column="emp_id" property="empId"></id>
+            <result column="emp_name" property="empName"></result>
+            <result column="age" property="age"></result>
+            <result column="gender" property="gender"></result>
+            <result column="dept_id" property="deptId"></result>
+        </resultMap>
+
+
+
+
+        <!--
+            由于java的命名使用的是驼峰，数据库字段命名使用的是snake下划线，所以会导致字段映射不上
+            解决方案1、sql中使用as起别名
+            解决方案2、mybatis-config配置文件中配置mapUnderscoreToCamelCase为true,自动转为驼峰
+        -->
+    <select id="getEmpByEmpId" resultMap="empResultMap">
+        select * from t_emp where emp_id = #{empId}
+    </select>
+
+    <resultMap id="empDeptMap" type="Emp">
+        <id column="emp_id" property="empId"></id>
+        <result column="emp_name" property="empName"></result>
+        <result column="age" property="age"></result>
+        <result column="gender" property="gender"></result>
+        <association property="dept" javaType="Dept">
+            <id column="dept_id" property="deptId"></id>
+            <result column="dept_name" property="deptName"></result>
+        </association>
+    </resultMap>
+
+    <select id="getEmpAndDeptByEmpId" resultMap="empDeptMap">
+        select emp.*, dept.*
+        from t_emp emp left join t_dept dept on emp.dept_id = dept.dept_id
+        where emp.emp_id = #{empId}
+    </select>
+
+    <resultMap id="empDeptMapByStep" type="Emp">
+        <id column="emp_id" property="empId"></id>
+        <result column="emp_name" property="empName"></result>
+        <result column="age" property="age"></result>
+        <result column="gender" property="gender"></result>
+        <result column="dept_id" property="deptId"></result>
+        <association property="dept" fetchType="eager"
+                     select="com.nr.mybatis.mapper.DeptMapper.getDeptByStep" column="dept_id">
+        </association>
+    </resultMap>
+
+    <select id="getEmpAndDeptByStep" resultMap="empDeptMapByStep">
+        select emp.* from t_emp emp  where emp.emp_id = #{empId}
+    </select>
+
+
+    <select id="getEmpByDeptId" resultType="Emp">
+        select * from t_emp  where dept_id = #{deptId}
+    </select>
+</mapper>
