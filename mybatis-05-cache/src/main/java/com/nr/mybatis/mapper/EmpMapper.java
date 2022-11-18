@@ -12,5 +12,5 @@ import java.util.List;
  */
 public interface EmpMapper {
 
-
+    Emp getByEmpId(@Param("empId") Integer empId);
 }
