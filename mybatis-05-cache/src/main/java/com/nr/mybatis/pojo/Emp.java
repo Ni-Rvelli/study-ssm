@@ -1,11 +1,13 @@
 package com.nr.mybatis.pojo;
 
+import java.io.Serializable;
+
 /**
  * @Date: 2022/10/22
  * @Author: NiRui
  * @Description: 员工对象
  */
-public class Emp {
+public class Emp implements Serializable {
 
     /**
      * id

@@ -1,8 +1,14 @@
 import com.nr.mybatis.mapper.EmpMapper;
 import com.nr.mybatis.pojo.Emp;
 import com.nr.mybatis.util.SqlSessionUtil;
+import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * @Date: 2022/9/27
@@ -25,4 +31,18 @@ public class MyBatisTest {
         sqlSession.close();
     }
 
+    @Test
+    public void testCacheTwo() throws IOException {
+        InputStream is = Resources.getResourceAsStream("mybatis-config.xml");
+        SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
+        SqlSessionFactory SqlSessionFactory = sqlSessionFactoryBuilder.build(is);
+        SqlSession sqlSession1 = SqlSessionFactory.openSession(true);
+        EmpMapper mapper1 = sqlSession1.getMapper(EmpMapper.class);
+        Emp emp1 = mapper1.getByEmpId(1);
+        sqlSession1.close();
+        SqlSession sqlSession2 = SqlSessionFactory.openSession(true);
+        EmpMapper mapper2 = sqlSession2.getMapper(EmpMapper.class);
+        Emp emp2 = mapper2.getByEmpId(1);
+        sqlSession2.close();
+    }
 }
