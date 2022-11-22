@@ -45,4 +45,5 @@ public class MyBatisTest {
         Emp emp2 = mapper2.getByEmpId(1);
         sqlSession2.close();
     }
+
 }
