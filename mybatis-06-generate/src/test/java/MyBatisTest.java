@@ -18,8 +18,8 @@ public class MyBatisTest {
     public void testCacheOne() {
         SqlSession sqlSession = SqlSessionUtil.getSqlSession();
         EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
-//        List<Emp> emp = mapper.selectAll();
-//        System.out.println(emp);
+        Emp emp = mapper.selectByPrimaryKey(1);
+        System.out.println(emp);
 
     }
 
