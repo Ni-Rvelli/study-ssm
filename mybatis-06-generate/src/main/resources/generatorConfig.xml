@@ -1,19 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE generatorConfiguration PUBLIC
-        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
-        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
 <generatorConfiguration>
     <properties resource="jdbc.properties"></properties>
-
-    <!-- classPathEntry:数据库的 JDBC驱动的jar 包地址 -->
-    <classPathEntry location="E:\workspase\study-ssm/lib/mysql-connector-java-5.1.47.jar"/>
-
-    <!--生成java代码-->
-    <context id="context" targetRuntime="MyBatis3">
+    <!--
+      targetRuntime: 执行生成的逆向工程的版本
+      MyBatis3Simple: 生成基本的CRUD
+      MyBatis3: 生成带条件的CRUD
+    -->
+    <context id="DB2Tables" targetRuntime="MyBatis3">
         <!-- 配置生成pojo的序列化的插件-->
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
         <!-- 配置生成toString的序列化的插件  -->
         <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+        <!-- 解决mapper.xml文件是追加而不是覆盖的问题  -->
+        <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin" />
         <commentGenerator>
             <!-- 是否去除自动生成的（english）注释 true：是 ： false:否 -->
             <property name="suppressAllComments" value="true"/>
@@ -23,7 +26,10 @@
         <jdbcConnection driverClass="${jdbc.driver}"
                         connectionURL="${jdbc.url}"
                         userId="${jdbc.username}"
-                        password="${jdbc.password}"/>
+                        password="${jdbc.password}">
+            <!--低版本的连接中nullCatalogMeansCurrent默认是true，高版本之后就是false了,解决mapper文件中缺少主键的增删改-->
+            <property name="nullCatalogMeansCurrent" value="true"/>
+        </jdbcConnection>
 
         <!-- 指定生成的实体类的存放位置 -->
         <javaModelGenerator targetPackage="com.nr.mybatis.pojo" targetProject="./src/main/java">
@@ -31,18 +37,18 @@
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <!-- 指定生成的Dao映射文件的存放位置 -->
+        <!-- 指定生成的Mapper映射文件的存放位置 -->
         <sqlMapGenerator targetPackage="com.nr.mybatis.mapper" targetProject="./src/main/resources">
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 
-        <!--指定生成的Dao接口的存放位置-->
+        <!--指定生成的Mapper接口的存放位置-->
         <javaClientGenerator targetPackage="com.nr.mybatis.mapper" targetProject="./src/main/java" type="XMLMAPPER">
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
-        <!-- 指定数据库表 -->
-        <table tableName="t_emp" domainObjectName="Emp"/>
+        <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->
+        <table tableName="t_form_group" domainObjectName="FormGroup"></table>
 
     </context>
 </generatorConfiguration>
