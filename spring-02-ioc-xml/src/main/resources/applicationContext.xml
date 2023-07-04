@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+    <context:property-placeholder location="classpath:content.properties"></context:property-placeholder>
+
+    <bean id="student" class="com.nr.spring.Student"></bean>
+
+    <bean id="teacher" class="com.nr.spring.Teacher"></bean>
+
+    <bean id="studentOne" class="com.nr.spring.Student">
+        <!-- property标签：通过组件类的setXxx()方法给组件对象设置属性 -->
+        <!-- name属性：指定属性名（这个属性名是getXxx()、setXxx()方法定义的，和成员变量无关）-->
+        <!-- value属性：指定属性值 -->
+        <property name="id" value="1"></property>
+        <property name="name" value="学生A"></property>
+        <property name="gender" value="男"></property>
+        <property name="age" value="25"></property>
+    </bean>
+
+    <bean id="studentTwo" class="com.nr.spring.Student">
+        <constructor-arg name="id" value="2"></constructor-arg>
+        <constructor-arg name="name" value="学生B"></constructor-arg>
+        <constructor-arg name="gender" value="女"></constructor-arg>
+        <constructor-arg name="age" value="26"></constructor-arg>
+    </bean>
+
+    <bean id="studentThree" class="com.nr.spring.Student">
+
+        <property name="id" value="1"></property>
+        <property name="gender">
+            <null></null>
+        </property>
+        <property name="name">
+            <value><![CDATA[学生C]]></value>
+        </property>
+        <property name="age" value="25"></property>
+    </bean>
+
+    <bean id="student5" class="com.nr.spring.Student">
+        <property name="id" value="1"></property>
+        <property name="name" value="学生A"></property>
+        <property name="gender" value="男"></property>
+        <property name="age" value="25"></property>
+        <property name="school" ref="schoolRef"></property>
+    </bean>
+
+    <bean id="schoolRef" class="com.nr.spring.School">
+        <property name="id" value="01"></property>
+        <property name="schoolName" value="清华大学"></property>
+    </bean>
+
+    <bean id="student6" class="com.nr.spring.Student">
+        <property name="id" value="1"></property>
+        <property name="name" value="学生A"></property>
+        <property name="gender" value="男"></property>
+        <property name="age" value="25"></property>
+        <property name="school">
+            <bean id="schoolInner" class="com.nr.spring.School">
+                <property name="id" value="01"></property>
+                <property name="schoolName" value="清华大学"></property>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="student7" class="com.nr.spring.Student">
+        <property name="id" value="1"></property>
+        <property name="name" value="学生A"></property>
+        <property name="gender" value="男"></property>
+        <property name="age" value="25"></property>
+        <!-- 这边要保存school对象已经实例化，不然会报空指针 -->
+        <property name="school" ref="schoolRef"></property>
+        <property name="school.schoolName" value="北京大学"></property>
+        <property name="school.id" value="02"></property>
+    </bean>
+
+
+    <bean id="student8" class="com.nr.spring.Student">
+        <property name="id" value="1"></property>
+        <property name="name" value="学生A"></property>
+        <property name="gender" value="男"></property>
+        <property name="age" value="25"></property>
+        <property name="books">
+            <array>
+                <value>高数</value>
+                <value>英语</value>
+                <value>计算机与网络原理</value>
+            </array>
+        </property>
+    </bean>
+
+
+    <bean id="student9" class="com.nr.spring.Student">
+        <property name="id" value="1"></property>
+        <property name="name" value="学生A"></property>
+        <property name="gender" value="男"></property>
+        <property name="age" value="25"></property>
+        <property name="teachers">
+            <list>
+                <ref bean="teacher1"></ref>
+                <ref bean="teacher2"></ref>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="teacher1" class="com.nr.spring.Teacher">
+        <property name="id" value="1"></property>
+        <property name="name" value="李老师"></property>
+    </bean>
+    <bean id="teacher2" class="com.nr.spring.Teacher">
+        <property name="id" value="2"></property>
+        <property name="name" value="王老师"></property>
+    </bean>
+
+
+    <bean id="student10" class="com.nr.spring.Student">
+        <property name="id" value="1"></property>
+        <property name="name" value="学生A"></property>
+        <property name="gender" value="男"></property>
+        <property name="age" value="25"></property>
+        <property name="teacherMap">
+            <map>
+                <!-- 推荐使用 -->
+                <entry key="1" value-ref="teacher1"></entry>
+                <!-- 不推荐使用，写的太麻烦 -->
+                <entry>
+                    <key>
+                        <value>2</value>
+                    </key>
+                    <ref bean="teacher2"></ref>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="student11" class="com.nr.spring.Student">
+        <property name="id" value="${content.id}"></property>
+        <property name="name" value="${content.name}"></property>
+        <property name="gender" value="男"></property>
+        <property name="age" value="25"></property>
+        <property name="teacherMap" ref="teacherMap"></property>
+    </bean>
+
+    <util:map id="teacherMap">
+        <entry key="1" value-ref="teacher1"></entry>
+        <entry key="2" value-ref="teacher2"></entry>
+    </util:map>
+
+    <bean id="student12" class="com.nr.spring.Student" p:id="1" p:teacherMap-ref="teacherMap">
+    </bean>
+
+</beans>
