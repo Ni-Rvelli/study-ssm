@@ -32,6 +32,10 @@ public class Student implements Person{
      */
     private School school;
     /**
+     * 教师
+     */
+    private Teacher teacher;
+    /**
      * 书本
      */
     private String[] books;
@@ -119,6 +123,14 @@ public class Student implements Person{
         this.teacherMap = teacherMap;
     }
 
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -127,6 +139,7 @@ public class Student implements Person{
                 ", gender='" + gender + '\'' +
                 ", age=" + age +
                 ", school=" + school +
+                ", teacher=" + teacher +
                 ", books=" + Arrays.toString(books) +
                 ", teachers=" + teachers +
                 ", teacherMap=" + teacherMap +

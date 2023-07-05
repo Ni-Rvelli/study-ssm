@@ -43,4 +43,22 @@ public class IocByXMLTest {
         Student student = ioc.getBean("student11", Student.class);
         System.out.println(student);
     }
+
+    @Test
+    public void testScope() {
+        ApplicationContext ioc = new ClassPathXmlApplicationContext("spring-scope.xml");
+        Student student1 = ioc.getBean("student", Student.class);
+        System.out.println(student1);
+        Student student2 = ioc.getBean("student", Student.class);
+        System.out.println(student2);
+        System.out.println(student1==student2);
+    }
+
+    @Test
+    public void testAuto() {
+        ApplicationContext ioc = new ClassPathXmlApplicationContext("spring-auto.xml");
+        Student student1 = ioc.getBean("student", Student.class);
+        System.out.println(student1);
+
+    }
 }
