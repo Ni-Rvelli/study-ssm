@@ -23,6 +23,27 @@ public class IocByXMLTest {
     }
 
     @Test
+    public void testStaticFactory(){
+        ApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext.xml");
+        Student student = ioc.getBean("studentByFa",Student.class);
+        System.out.println(student);
+    }
+
+    @Test
+    public void testFactory(){
+        ApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext.xml");
+        School school = ioc.getBean("schoolByFa",School.class);
+        System.out.println(school);
+    }
+
+    @Test
+    public void testFactory1(){
+        ApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext.xml");
+        Teacher teacher = ioc.getBean("teacher",Teacher.class);
+        System.out.println(teacher);
+    }
+
+    @Test
     public void testDi(){
         ApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext.xml");
         Student student = ioc.getBean("studentOne",Student.class);
@@ -61,4 +82,14 @@ public class IocByXMLTest {
         System.out.println(student1);
 
     }
+
+    @Test
+    public void testLife() {
+        ClassPathXmlApplicationContext ioc = new ClassPathXmlApplicationContext("spring-life.xml");
+        UserDao userDao = ioc.getBean("userDao", UserDao.class);
+        System.out.println(userDao);
+        ioc.registerShutdownHook();
+
+    }
+
 }

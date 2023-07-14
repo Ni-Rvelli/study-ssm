@@ -8,7 +8,15 @@
 
     <bean id="student" class="com.nr.spring.Student"></bean>
 
-    <bean id="teacher" class="com.nr.spring.Teacher"></bean>
+    <bean id="teacher-p" class="com.nr.spring.Teacher"></bean>
+
+    <bean id="schoolFactory" class="com.nr.spring.SchoolFactory"></bean>
+
+    <bean id="schoolByFa" factory-method="getSchool" factory-bean="schoolFactory"></bean>
+
+    <bean id="studentByFa" class="com.nr.spring.StudentFactory" factory-method="getStudent"></bean>
+
+    <bean id="teacher" class="com.nr.spring.TeacherFactory"></bean>
 
     <bean id="studentOne" class="com.nr.spring.Student">
         <!-- property标签：通过组件类的setXxx()方法给组件对象设置属性 -->
@@ -150,5 +158,6 @@
 
     <bean id="student12" class="com.nr.spring.Student" p:id="1" p:teacherMap-ref="teacherMap">
     </bean>
+
 
 </beans>

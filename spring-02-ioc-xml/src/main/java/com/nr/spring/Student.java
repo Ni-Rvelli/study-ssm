@@ -49,7 +49,6 @@ public class Student implements Person{
     private Map<String ,Teacher> teacherMap;
 
     public Student (){
-
     }
 
     public Student(String id, String name, String gender, Integer age) {
